@@ -24,11 +24,7 @@ const ProfileIcon = ({ onRouteChange, toggleModal }) => {
             alt="avatar"
           />
         </DropdownToggle>
-        <DropdownMenu
-          right
-          className="b--transparent shadow-5 mt-0"
-          style={{ backgroundColor: "rgba(255,255,255,.5)" }}
-        >
+        <DropdownMenu right className="b--transparent shadow-5 mt-0">
           <DropdownItem onClick={() => toggleModal()}>
             View Profile
           </DropdownItem>
