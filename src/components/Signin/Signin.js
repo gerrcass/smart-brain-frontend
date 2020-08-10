@@ -49,7 +49,8 @@ class Signin extends React.Component {
             })
             .catch(console.log);
         }
-      });
+      })
+      .catch(console.log);
   };
 
   render() {

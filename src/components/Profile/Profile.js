@@ -12,6 +12,7 @@ class Profile extends React.Component {
       pet: this.props.user.pet,
     };
   }
+
   onFormChange = (event) => {
     switch (event.target.name) {
       case "user-name":
