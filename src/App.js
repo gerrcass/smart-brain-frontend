@@ -159,6 +159,21 @@ class App extends Component {
 
   onRouteChange = (route) => {
     if (route === "signout") {
+      fetch("http://localhost:3000/signin", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: window.sessionStorage.getItem("token"),
+        },
+        body: JSON.stringify({
+          isSigningOut: true,
+        }),
+      })
+        .then((response) => response.json())
+        .then(() => {
+          window.sessionStorage.removeItem("token");
+        })
+        .catch(console.log);
       return this.setState(initialState);
     } else if (route === "home") {
       this.setState({ isSignedIn: true });

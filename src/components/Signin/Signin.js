@@ -32,7 +32,6 @@ class Signin extends React.Component {
       .then((response) => response.json())
       .then((data) => {
         if (data.userId && data.success === true) {
-          console.log("singin>>", data);
           this.saveAuthTokenInSession(data.token);
           fetch(`http://localhost:3000/profile/${data.userId}`, {
             method: "GET",
