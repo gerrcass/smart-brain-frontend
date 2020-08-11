@@ -22,6 +22,8 @@ class Rank extends React.Component {
   }
 
   generateEmoji = (entries) => {
+    /* see the code of the following AWS Lambda function:
+    https://github.com/gerrcass/smart-brain-serverless-aws-lambda */
     fetch(
       `https://mogvpxyhci.execute-api.us-east-1.amazonaws.com/prod/rank/?rank=${entries}`
     )
